@@ -18,6 +18,15 @@ body {
   font-family: var(--Poppins);
 }
 
+body > * {
+  margin: auto;
+}
+
+.start-wrapper {
+  max-width: 1440px;
+  align-self: center;
+}
+
 h2 {
   font-family: var(--Poppins);
   font-size: 24px;
@@ -129,7 +138,7 @@ img {
 .intro__with-contact {
   padding: 0 16px;
   padding-left: 5vw;
-  max-width: 40ch;
+  max-width: 1440px;
 }
 
 .intro__byte {
@@ -215,6 +224,11 @@ img {
   box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
 }
 
+.offers__card:hover > .offer__button {
+  background-color: #2d9cdb;
+  color: white;
+}
+
 .offer__img {
   width: 32px;
   height: 32px;
@@ -257,8 +271,8 @@ img {
   padding: 12px;
   border-radius: 12px;
   border: none;
-  background-color: #2d9cdb;
-  color: white;
+  background-color: #e0e0e0;
+  color: #828282;
   font-weight: 500;
   font-size: 16px;
 }
@@ -368,14 +382,21 @@ img {
   padding: 32px 32px;
   color: white;
   background-color: #100e1d;
-  display: flex;
   flex-direction: column;
   gap: 32px;
+  display: flex;
+}
+
+.footer__content-container {
+  flex-direction: column;
+  gap: 32px;
+  display: flex;
 }
 
 .footer__credits {
   font-family: var(--Montserrat);
   font-size: 12px;
+  align-self: center;
 }
 
 .footer__author {
@@ -386,4 +407,118 @@ img {
 
 .footer__author:visited {
   color: white;
+}
+
+@media screen and (min-width: 650px) {
+  h2 {
+    font-size: 48px;
+  }
+
+  .intro__byte,
+  .intro__content,
+  .team__intro {
+    font-size: 18px;
+  }
+
+  .designs__app-type {
+    font-size: 14px;
+  }
+
+  .designs__name {
+    font-size: 18px;
+  }
+
+  .designs__see-more {
+    font-size: 24px;
+  }
+
+  .last__quote {
+    font-size: 36px;
+  }
+
+  .nav__hamburger {
+    display: none;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav__list {
+    display: flex;
+    gap: 16px;
+  }
+
+  .nav__item {
+    border: none;
+  }
+
+  .intro__start,
+  .intro__with-contact {
+    padding-left: 5vw;
+    max-width: 60ch;
+  }
+
+  .offers {
+    align-self: center;
+    display: grid;
+    max-width: 1440px;
+    grid-template-areas:
+      "heading heading heading"
+      "offer1 offer2 offer3";
+  }
+
+  .offers > h2 {
+    grid-area: heading;
+  }
+
+  .designs {
+    align-self: center;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .designs > h2 {
+    grid-column: 1 / span 2;
+  }
+
+  .designs > .designs__item:nth-child(2n) {
+    margin-top: 25%;
+  }
+
+  .designs__see-more {
+    grid-column: 1 / span 2;
+    justify-self: end;
+  }
+
+  .team {
+    width: auto;
+    max-width: 1440px;
+    align-self: center;
+    justify-content: space-between;
+    gap: 64px;
+    display: flex;
+  }
+
+  .last-words {
+    max-width: 1440px;
+  }
+
+  .last__quote {
+    max-width: 40ch;
+  }
+
+  .last-words__person {
+    width: 350px;
+  }
+
+  .footer__content-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
